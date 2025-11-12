@@ -1,36 +1,106 @@
-# liferay-devcon-2025-advanced-cx-workshop
+# Liferay DevCon 2025 – Advanced Client Extensions Workshop
 
-So this is the Liferay Workspace for the Liferay Devcon 2025 workshop on Advanced Client Extension Techniques.
+Welcome to the workspace for the **Liferay DevCon 2025 Advanced Client Extensions Workshop**!  
+This project provides the environment and all related assets used during the hands-on session.
 
-It is pretty much ready to go, just do the following:
+---
 
-```
-$ blade gw initBundle
-$ blade server start
-```
+## 🧭 Workshop Purpose
 
-After that, point your browser at http://localhost:8080 and sign in using the credentials:
+This workshop explores **advanced techniques for wrapping and extending custom elements within Liferay**, focusing on how Client Extensions (CXs) and Fragments can be combined to create powerful, flexible user experiences.
 
-* User: `devcon-admin@liferay-devcon.com`
-* Password: `learn-devcon`
+By the end of the workshop, attendees will:
 
-With that, you'll be ready for the workshop!
+1. **Understand how to wrap custom elements in Liferay Fragments** to expose configuration, localization, and drop zones.  
+2. **Build visually engaging components** (like animated CTAs, 3D heroes, and particle-based effects) using modern web standards.  
+3. **Learn practical development workflows** for creating, deploying, and testing Client Extensions within a Liferay environment.
 
-This workspace uses Liferay DXP 2025 Q1.18 and includes a developer license good through the end of 2025.
+---
 
-## Fragments
+## ⚙️ Environment Setup
 
-Through the course of the workshop, you'll be creating a number of eye-catching components to use in Liferay.
+### Prerequisites
 
-Don't worry, the hard part (creating the Front End Client Extension) is already done. If interested, check out client-extensions/devcon-elements.
+Make sure you have the following installed on your system:
 
-All of the elements are implemented using Lit, but the important part is that they are _*Standard Web Components*_. Once you have a _Standard Web Component_, it's pretty
-easy to wrap a Liferay Client Extension around it to use it in a Liferay environment.
+- **Liferay Blade CLI**  
+- **JDK 21**  
+- **Git client**
 
-### Lottie CTA
+### Setup Steps
 
-The Lottie Call To Action component shows of a Lottie Player element that is built around leveraging in Liferay.
+1. **Clone this repository:**
 
-Why: Crisp, lightweight vector animations for buttons/hero banners; easy timeline control & events.  ￼
-Fragment knobs: animation src, loop, hover-play, speed; FM sets CTA text/URL, per-role alternate animation; i18n for labels/tooltips.
+   ```bash
+   git clone https://github.com/dnebing/liferay-devcon-2025-advanced-cx-workshop.git
+   cd liferay-devcon-2025-advanced-cx-workshop
+   ```
 
+2. **Initialize and build the local Liferay bundle:**
+
+   ```bash
+   blade gw initBundle
+   ```
+
+   This command prepares a local Liferay bundle using the artifacts included in the workspace.
+
+3. **Start the environment:**
+
+   ```bash
+   blade server start
+   ```
+
+4. **Access the local site:**
+
+   Open your browser and navigate to [http://localhost:8080](http://localhost:8080)
+
+   **Login credentials:**
+   - **Username:** `devcon-admin@liferay-devcon.com`  
+   - **Password:** `learn-devcon`
+
+---
+
+## 💡 Workshop Components
+
+During the session, you’ll be creating and exploring **four advanced custom element fragments**, each built with Lit and enhanced through fragment configuration:
+
+| Fragment | Description |
+|-----------|-------------|
+| **Lottie CTA** | A call-to-action button enhanced with a looping or interactive Lottie animation. Great for attention-grabbing hero sections or product promotions. |
+| **3D Hero** | A hero banner featuring an interactive 3D model (GLB/GLTF) with optional AR support. Demonstrates integrating external 3D assets and using fragment configuration for interactivity. |
+| **Tilt Carousel** | A visually dynamic carousel with subtle 3D tilt and perspective transitions. Uses a drop zone for image fragments and fragment configuration for animation tuning. |
+| **Particles Hero** | A visually rich hero section with animated particles in multiple presets (bubbles, snowy, minimal). Demonstrates fragment customization and advanced styling overrides. |
+
+Each example highlights different ways to integrate **custom web components, fragment configuration, and dynamic content composition** within Liferay.
+
+---
+
+## 🧪 For Non-Attendees or Self-Guided Learning
+
+If you’re exploring this workspace outside the live workshop — you can still follow along!
+
+After logging into your local Liferay instance:
+
+1. **Navigate to the “Fragment Lab” page** (available only after login).  
+   This is your interactive workspace for building and testing the fragments.
+
+2. **On the left side**, you’ll see a list of fragment names.  
+   Each entry corresponds to one of the four fragments built in the workshop.
+
+3. **Click any fragment name** to open its **details and instructions** on the right side.  
+   Here you’ll find:
+   - A brief description and usage steps  
+   - The **HTML**, **CSS**, **JavaScript**, and **Configuration** needed for the fragment  
+   - A convenient **“Copy” button** to copy each code section  
+
+4. It’s recommended to **open two tabs**:
+   - One for the **Fragment Lab** (to copy code and read instructions)  
+   - One for **creating and editing the fragment** in Liferay  
+
+By following these steps, you can complete the same exercises covered in the workshop —  
+just without the **witty banter** or **personal assistance**. 😉
+
+---
+
+Happy building!  
+**Liferay DevCon 2025 – Advanced Client Extensions Workshop Team**
