@@ -1,0 +1,25 @@
+{
+  "name": "devcon-elements",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "@dotlottie/player-component": "^2.7.12",
+    "@google/model-viewer": "^4.1.0",
+    "lit": "^3.3.1",
+    "three": "^0.180.0",
+    "tsparticles-basic": "^2.12.0",
+    "tsparticles-confetti": "^2.12.0",
+    "tsparticles-engine": "^2.12.0",
+    "tsparticles-slim": "^2.12.0"
+  }
+}

@@ -1,0 +1,23 @@
+# This is the assemble block so Vite will package the client extension.
+assemble:
+    - from: vite-build
+      into: static
+
+# We want to import the custom elements into a custom fragment, we need use a JS Import Map.
+fragment-lab:
+  bareSpecifier: fragment-lab
+  name: Fragment Lab
+  type: jsImportMapsEntry
+  url: assets/index.js
+
+fragment-viewer:
+    friendlyURLMapping: fragment-viewer
+    htmlElementName: fragment-viewer
+    instanceable: true
+    name: Fragment Viewer
+    type: customElement
+    description: A viewer for Liferay fragment details.
+    portletCategoryName: category.client-extensions
+    urls:
+        - assets/*.js
+    useESM: true

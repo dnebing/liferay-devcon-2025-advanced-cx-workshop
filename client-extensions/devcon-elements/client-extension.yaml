@@ -1,0 +1,60 @@
+# This is the assemble block so Vite will package the client extension.
+assemble:
+    - from: vite-build
+      into: static
+
+# We want to import the custom elements into a custom fragment, we need use a JS Import Map.
+devcon-elements:
+  bareSpecifier: devcon-elements
+  name: DevCon Elements
+  type: jsImportMapsEntry
+  url: assets/index.js
+
+devcon-lottie-cta:
+    friendlyURLMapping: devcon-lottie-cta
+    htmlElementName: devcon-lottie-cta
+    instanceable: true
+    name: Devcon Lottie CTA
+    type: customElement
+    description: Animated call-to-action button using a Lottie player.
+    portletCategoryName: category.client-extensions
+    urls:
+        - assets/*.js
+    useESM: true
+
+devcon-three-d-hero:
+    friendlyURLMapping: devcon-three-d-hero
+    htmlElementName: devcon-three-d-hero
+    instanceable: true
+    name: Devcon 3D Hero
+    type: customElement
+    description: 3D hero section with a 3D model viewer.
+    portletCategoryName: category.client-extensions
+    urls:
+        - assets/*.js
+    useESM: true
+
+devcon-tilt-carousel:
+    friendlyURLMapping: devcon-tilt-carousel
+    htmlElementName: devcon-tilt-carousel
+    instanceable: true
+    name: Devcon Tilt Carousel
+    type: customElement
+    description: Tilt carousel component.
+    portletCategoryName: category.client-extensions
+    urls:
+        - assets/*.js
+    useESM: true
+
+devcon-particles-hero:
+    friendlyURLMapping: devcon-particles-hero
+    htmlElementName: devcon-particles-hero
+    instanceable: true
+    name: Devcon Particles Hero
+    type: customElement
+    description: Particles hero component.
+    portletCategoryName: category.client-extensions
+    urls:
+        - assets/*.js
+    useESM: true
+

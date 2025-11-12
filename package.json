@@ -1,0 +1,9 @@
+{
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "client-extensions/fragment-lab",
+            "client-extensions/devcon-elements"
+        ]
+    }
+}
