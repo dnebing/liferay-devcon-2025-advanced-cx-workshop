@@ -19,5 +19,9 @@ fragment-viewer:
     description: A viewer for Liferay fragment details.
     portletCategoryName: category.client-extensions
     urls:
-        - assets/*.js
+        - assets/index.js
+        - prism.js
+        - prism-liferay-ftl.js
+    cssURLs:
+        - prism.css
     useESM: true
